@@ -11,7 +11,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
           </div>
         </div>
         <div className="hidden md:block bg-[#000842] w-1/2 m-8 rounded-2xl">
-          <Image className="mx-auto" src={image} alt="banner" />
+          <Image className="mx-auto hover:scale-110 transition-all" src={image} alt="banner" />
         </div>
       </div>
     </section>

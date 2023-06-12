@@ -1,11 +1,15 @@
 import React from 'react'
-type Props = {}
+import Image from 'next/image'
+import facebook from '../../Image/Facebook.png'
+import apple from '../../Image/apple.png'
+import google from '../../Image/google.png'
 
+type Props = {}
 const Login = (props: Props) => {
   return (
     <>
-      <h3 className="text-4xl font-medium my-10">Sign in</h3>
-      <span className=" font-normal text-base mb-5">
+      <h3 className="text-4xl font-medium my-5">Sign in</h3>
+      <span className=" font-normal text-base mt-5">
         If you don’t have an account register
         <br />
         You can{'  '}
@@ -13,24 +17,24 @@ const Login = (props: Props) => {
           Register here !
         </a>
       </span>
-      <form className="my-10">
+      <form className="my-8">
         <div className="block mb-10 text-sm">
-          <label className="text-[#999999] " htmlFor="femail">
+          <label className="text-gray-400 " htmlFor="femail">
             Email
           </label>
           <input
-            className="border-b-2 py-2 border-[#999999] focus:outline-none w-full my-2 focus:border-[#000842] placeholder:text-[#000842] "
+            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950 "
             type="text"
             placeholder="Enter your email address"
             id="femail"
           />
         </div>
         <div className="block text-sm">
-          <label className="text-[#999999] " htmlFor="fpassword">
+          <label className="text-gray-400 " htmlFor="fpassword">
             Password
           </label>
           <input
-            className="border-b-2 py-2 border-[#999999] focus:outline-none w-full my-2 focus:border-[#000842] placeholder:text-[#000842] "
+            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950 "
             type="password"
             placeholder="Enter your password"
             id="fpassword"
@@ -50,17 +54,31 @@ const Login = (props: Props) => {
         <div className="mt-10">
           <button
             type="button"
-            className="w-full bg-blue-800 rounded-full text-white py-3 active:bg-blue-700"
+            className="w-full bg-blue-800 rounded-full text-white py-3 active:bg-blue-500 hover:bg-blue-700 transition-all"
           >
             Login
           </button>
         </div>
       </form>
-      <span>or continue with</span>
-      <div className="flex justify-around">
-        <i className="cursor-pointer">Icon facebook</i>
-        <i className="cursor-pointer">Icon Apple</i>
-        <i className="cursor-pointer">Icon google</i>
+      <div className="w-full text-center italic text-gray-500">
+        <label>or continue with</label>
+      </div>
+      <div className="flex justify-around mt-5">
+        <Image
+          src={facebook}
+          className="cursor-pointer hover:scale-110 transition-all"
+          alt="Facebook icon"
+        ></Image>
+        <Image
+          src={apple}
+          className="cursor-pointer hover:scale-110 transition-all"
+          alt="Apple icon"
+        ></Image>
+        <Image
+          src={google}
+          className="cursor-pointer hover:scale-110 transition-all"
+          alt="Google icon"
+        ></Image>
       </div>
     </>
   )
