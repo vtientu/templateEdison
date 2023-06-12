@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import image from '../Image/banner.png'
+import image from '../assets/Image/banner.png'
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <section>

@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import { LockClosedIcon, EnvelopeIcon, EyeSlashIcon } from '@heroicons/react/24/outline'
-import facebook from '../../Image/Facebook.png'
-import apple from '../../Image/apple.png'
-import google from '../../Image/google.png'
+import facebook from '../../assets/Image/Facebook.png'
+import apple from '../../assets/Image/apple.png'
+import google from '../../assets/Image/google.png'
 
 type Props = {}
 const Login = (props: Props) => {
