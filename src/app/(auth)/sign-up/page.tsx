@@ -1,8 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import image from '../../Image/banner.png'
-import AuthLayout from '../layout'
-
+import { EnvelopeIcon, UserIcon, LockClosedIcon, EyeSlashIcon } from '@heroicons/react/24/outline'
 type Props = {}
 
 const SignUp = (props: Props) => {
@@ -18,49 +15,67 @@ const SignUp = (props: Props) => {
         </a>
       </span>
       <form className="my-10">
-        <div className=" mb-5 md:mb-8 text-sm">
+        <div className="border-b-2 border-gray-400 mb-5 md:mb-8 text-sm">
           <label className="text-gray-400 " htmlFor="femail">
             Email
           </label>
-          <input
-            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
-            type="text"
-            placeholder="Enter your email address"
-            id="femail"
-          />
+          <div className="flex ">
+            <EnvelopeIcon className="w-6 mt-2 mr-3" />
+            <input
+              className="py-2 focus:outline-none w-full mt-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
+              type="text"
+              placeholder="Enter your email address"
+              id="femail"
+            />
+          </div>
         </div>
-        <div className=" text-sm mb-5 md:mb-8">
+        <div className="border-b-2 border-gray-400 text-sm mb-5 md:mb-8">
           <label className="text-gray-400 " htmlFor="fuser">
             Username
           </label>
-          <input
-            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
-            type="password"
-            placeholder="Enter your User name"
-            id="fuser"
-          />
+          <div className="flex ">
+            <UserIcon className="w-6 mt-2 mr-3" />
+            <input
+              className="py-2 focus:outline-none w-full mt-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
+              type="password"
+              placeholder="Enter your User name"
+              id="fuser"
+            />
+          </div>
         </div>
-        <div className=" text-sm mb-5 md:mb-8">
+        <div className="border-b-2 border-gray-400 text-sm mb-5 md:mb-8">
           <label className="text-gray-400 " htmlFor="fpassword">
             Password
           </label>
-          <input
-            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
-            type="password"
-            placeholder="Enter your Password"
-            id="fpassword"
-          />
+          <div className="flex ">
+            <LockClosedIcon className="w-6 mt-2 mr-3" />
+            <input
+              className=" py-2 focus:outline-none w-full mt-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
+              type="password"
+              placeholder="Enter your Password"
+              id="fpassword"
+            />
+            <button type="button">
+              <EyeSlashIcon className="w-6 mt-2 text-gray-400" />
+            </button>
+          </div>
         </div>
-        <div className=" text-sm mb-5 md:mb-8">
+        <div className="border-b-2 border-gray-400 text-sm mb-5 md:mb-8">
           <label className="text-gray-400 " htmlFor="fcpassword">
             Confirm Password
           </label>
-          <input
-            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
-            type="password"
-            placeholder="Confirm your Password"
-            id="fcpassword"
-          />
+          <div className="flex ">
+            <LockClosedIcon className="w-6 mt-2 mr-3" />
+            <input
+              className=" py-2 focus:outline-none w-full mt-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950"
+              type="password"
+              placeholder="Confirm your Password"
+              id="fcpassword"
+            />
+            <button type="button">
+              <EyeSlashIcon className="w-6 mt-2 text-gray-400" />
+            </button>
+          </div>
         </div>
         <div className="mt-10 text-center">
           <button

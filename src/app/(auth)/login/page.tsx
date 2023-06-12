@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { LockClosedIcon, EnvelopeIcon, EyeSlashIcon } from '@heroicons/react/24/outline'
 import facebook from '../../Image/Facebook.png'
 import apple from '../../Image/apple.png'
 import google from '../../Image/google.png'
@@ -18,27 +19,36 @@ const Login = (props: Props) => {
         </a>
       </span>
       <form className="my-8">
-        <div className="block mb-10 text-sm">
+        <div className="border-b-2 border-gray-400 block mb-10 text-sm">
           <label className="text-gray-400 " htmlFor="femail">
             Email
           </label>
-          <input
-            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950 "
-            type="text"
-            placeholder="Enter your email address"
-            id="femail"
-          />
+          <div className="flex ">
+            <EnvelopeIcon className="w-6 mt-2 mr-3" />
+            <input
+              className="py-2 focus:outline-none w-full mt-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950 "
+              type="text"
+              placeholder="Enter your email address"
+              id="femail"
+            />
+          </div>
         </div>
-        <div className="block text-sm">
+        <div className="border-b-2 border-gray-400 block text-sm">
           <label className="text-gray-400 " htmlFor="fpassword">
             Password
           </label>
-          <input
-            className="border-b-2 py-2 border-gray-400 focus:outline-none w-full my-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950 "
-            type="password"
-            placeholder="Enter your password"
-            id="fpassword"
-          />
+          <div className="flex ">
+            <LockClosedIcon className="w-6 mt-2 mr-3" />
+            <input
+              className="py-2 focus:outline-none w-full mt-2 focus:border-indigo-950 hover:placeholder:text-gray-500 focus:placeholder:text-gray-400 placeholder:text-indigo-950 "
+              type="password"
+              placeholder="Enter your password"
+              id="fpassword"
+            />
+            <button type="button">
+              <EyeSlashIcon className="w-6 mt-2 text-gray-400" />
+            </button>
+          </div>
         </div>
         <div className="flex justify-between mt-3">
           <div className="block">

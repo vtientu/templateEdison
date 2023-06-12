@@ -1,4 +1,4 @@
-import './globals.css'
+import './assets/css/globals.css'
 import { Poppins } from 'next/font/google'
 
 const inter = Poppins({
